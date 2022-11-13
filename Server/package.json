@@ -1,0 +1,27 @@
+{
+  "name": "socketserver2022",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "nodemon --watch \"src/***.ts\" --exec \"ts-node\" \"src/Server.ts\""
+  },
+  "dependencies": {
+    "@types/express": "^4.17.14",
+    "@types/google-protobuf": "^3.15.6",
+    "@types/jsonwebtoken": "^8.5.9",
+    "@types/ws": "^8.5.3",
+    "express": "^4.18.1",
+    "google-protobuf": "^3.21.2",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.3",
+    "ws": "^8.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

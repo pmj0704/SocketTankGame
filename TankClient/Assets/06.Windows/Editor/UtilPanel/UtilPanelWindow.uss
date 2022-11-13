@@ -1,0 +1,32 @@
+VisualElement {
+background-color:#fffff0;
+}
+
+#menu-box{
+	display:flex;
+	flex-direction:row;
+	justify-content:center;
+}
+
+#menu-box > Button
+{
+	font-size:25px;
+	flex:1;
+}
+
+#generate-map
+{
+	flex:2;
+}
+
+/*
+#generate-map
+{
+	flex:2;
+	transition:all 0.3s;
+}*/
+
+#build-player
+{
+	flex:1;
+}

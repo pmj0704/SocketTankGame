@@ -1,0 +1,52 @@
+syntax = "proto3";
+package tankio;
+
+option csharp_namespace = "GGM.Proto.Tank";
+
+enum MSGID
+{
+   S_ENTER = 0;
+   S_INIT = 1;
+   C_ENTER = 2;
+   S_INITLIST = 3;
+   C_MOVE = 4;
+   S_PLAYERLIST = 5;
+   S_LEAVE = 6;
+   C_FIRE = 7;
+   S_FIRE = 8;
+}
+
+message Position
+{
+    float rotate = 1;
+    float x = 2;
+    float y = 3;
+    float turretRotate = 4;
+}
+//player infomation structure
+message PlayerInfo
+{
+    int32 playerId = 1;
+    string name = 2;
+    Position position = 3;
+}
+
+//when client connected to server
+message S_init
+{
+    int32 playerId = 1;
+    Position spawnPosition = 2;
+}
+
+//when client enter game and spwaning tank is successful
+message C_Enter
+{
+    string name = 1;
+    Position position = 2;
+}
+
+//server send new Player enter message to other player
+message S_Enter
+{
+    PlayerInfo player = 1;
+}

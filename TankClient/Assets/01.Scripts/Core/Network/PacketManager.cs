@@ -27,6 +27,9 @@ public class PacketManager
         //테스트 코드
         //_OnRecv.Add((ushort)MSGID.SPos, MakePacket<S_Pos>);
         //_Handlers.Add((ushort)MSGID.SPos, new SPosHandler());
+
+        _OnRecv.Add((ushort)MSGID.SInit, MakePacket<S_init>);
+        _Handlers.Add((ushort)MSGID.SInit, new TankSpawnHandler());
     }
 
     public IPacketHandler GetPacketHandler(ushort id)

@@ -5,28 +5,21 @@ background-color:#fffff0;
 #menu-box{
 	display:flex;
 	flex-direction:row;
-	justify-content:center;
+	justify-content:flex-start;
 }
 
 #menu-box > Button
 {
 	font-size:25px;
-	flex:1;
+	flex: 1;
 }
 
-#generate-map
+#show-count
 {
-	flex:2;
+	font-size:30px;
 }
 
-/*
-#generate-map
+#player-count
 {
-	flex:2;
-	transition:all 0.3s;
-}*/
 
-#build-player
-{
-	flex:1;
 }

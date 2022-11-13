@@ -4,7 +4,7 @@ import WS, { RawData } from 'ws';
 import MapManager, { MapCategory } from './MapManager';
 import { tankio } from './packet/packet';
 import Path from 'path';
-import PacketManager from './packetManager';
+import PacketManager from './PacketManager';
 import SocketSession from './SocketSession';
 import SessionManager from './SessionManager';
 
@@ -42,14 +42,14 @@ socketServer.on("connection", (soc:WS, req:IncomingMessage) => {
     let spawnPos:tankio.Position = MapManager.Instance.getRandomSafePosition();
     let welcomeMsg = new tankio.S_init({playerId:id, spawnPosition:spawnPos});
     session.sendData(welcomeMsg.serialize(), tankio.MSGID.S_INIT);
-
+    
     playerID++;
 
     soc.on("message", (data: RawData, isBinary: boolean)=>{
         if(isBinary)session.receiveMsg(data);
     })
     /*
-        종료 코드   
+        종료 코드
         1000 - 기본 normal closure
         1001 - 연결주체 중에 한 쪽이 말없이 떠남. 유니티 끄거나, 서버 셧다운
         1009 - 메시지가 너무 커서 프로세싱이 안된다.

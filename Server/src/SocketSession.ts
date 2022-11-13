@@ -1,5 +1,5 @@
 import WebSocket, {RawData} from "ws"
-import PacketManager from "./packetManager";
+import PacketManager from "./PacketManager";
 
 export default class SocketSession
 {

@@ -4,10 +4,13 @@
     xmlns:engine="UnityEngine.UIElements"
     xmlns:editor="UnityEditor.UIElements"
     xsi:noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd"
->
-    <Style src = "UtilPanelWindow.uss"/>
-    <engine:Box name = "menu-box">
-        <engine:Button name = "generate-map" text="맵데이터 생성"/>
-        <engine:Button name = "build-player" text="빌드본 생성"/>
+>   
+    <Style src="UtilPanelWindow.uss"/>
+    <engine:Box name="menu-box">
+        <engine:Button name="generate-map" text="맵 데이터 생성"/>
+        <engine:Button name="build-player" text="빌드본 생성"/>
     </engine:Box>
+
+        <engine:SliderInt name="player-count" direction="horizontal" low-value="2" high-value="4" value="2"/>
+        <engine:Label text="" name="show-count"/>
 </engine:UXML>

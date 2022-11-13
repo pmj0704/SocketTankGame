@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TankController : MonoBehaviour
+public class TankController : NetworkObject
 {
     public bool IsRemote = false;
 
@@ -42,4 +42,5 @@ public class TankController : MonoBehaviour
             _tankMove.CheckInput(); //입력 감지
         }
     }
+
 }
